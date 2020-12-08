@@ -21,6 +21,13 @@ body {
   cursor: pointer;
 }
 
+#colors {
+  cursor: pointer;
+  border: 1px solid grey;
+  padding: 12px 12px;
+  text-align: center;
+}
+
 .cart {
   margin: 25px 100px;
   float: right;

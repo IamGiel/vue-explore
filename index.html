@@ -11,6 +11,8 @@
   <body>
     <div id="app">
       <div class="nav-bar"></div>
+
+      <div class="cart">Cart: {{cart}} <button v-if="cart > 0" v-on:click="decrementCart">X</button></div>
       
       <div class="product-display">
         <div class="product-container">
@@ -33,7 +35,7 @@
 
             <P>Colors: </P>
             <ul>
-              <li v-for="variant in variants" :key="variant.id">{{variant.color}}</li>
+              <li id="colors" v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)">{{variant.color}}</li>
             </ul>
 
             <P>Sizes Available in: </P>
@@ -41,6 +43,7 @@
               <li v-for="size in sizes" :key="sizes.id">{{size.name}}</li>
             </ul>
           </div>
+          <button class="button" v-on:click="addToCart">Add to Cart</button>
         </div>
       </div>
     </div>
