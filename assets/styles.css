@@ -165,6 +165,13 @@ ul {
   list-style-type: none;
 }
 
+#numLeft {
+  font-size: 20px;
+    position: relative;
+    top: -20px;
+    color: green;
+}
+
 @media only screen and (max-width: 600px) {
   .container {
     flex-direction: column;
